@@ -1,0 +1,52 @@
+{
+  "name": "tinytar",
+  "version": "0.0.1",
+  "description": "Pure javascript implementation of POSIX TAR file format.",
+  "keywords": [
+    "tar",
+    "ustar"
+  ],
+  "main": "src/index.js",
+  "engines": {
+    "node": "^4.0.0",
+    "npm": "^2.0.0"
+  },
+  "scripts": {
+    "test": "mocha tests/*.js",
+    "build:dev": "NODE_ENV=development webpack --hide-modules --config webpack.config.development.js",
+    "build:dist": "NODE_ENV=production webpack --hide-modules --config webpack.config.production.js",
+    "build": "npm run build:dev && npm run build:dist",
+    "prepublish": "npm run build",
+    "review": "eslint index.js lib webpack.config.base.js webpack.config.development.js webpack.config.production.js"
+  },
+  "author": {
+    "name": "Levko Kravets",
+    "email": "levko.ne@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kravets-levko/tinytar/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kravets-levko/tinytar.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.11.1",
+    "eslint-config-google": "^0.7.1",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.17.2",
+    "mocha": "^3.1.2",
+    "raw-loader": "^0.5.1",
+    "val-loader": "^0.5.0",
+    "webpack": "^1.13.3"
+  },
+  "contributors": [
+    {
+      "name": "Levko Kravets",
+      "email": "levko.ne@gmail.com"
+    }
+  ]
+}

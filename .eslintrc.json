@@ -1,0 +1,14 @@
+{
+  "extends": "google",
+  "rules": {
+    "require-jsdoc": 0,
+    "eqeqeq": 0,
+    "no-constant-condition": 0,
+    "no-negated-condition": 0,
+    "no-implicit-coercion": 0,
+    "no-lonely-if": 0,
+    "no-var": 0,
+    "prefer-rest-params": 0,
+    "comma-dangle": [2, "never"]
+  }
+}

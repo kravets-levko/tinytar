@@ -1,0 +1,5 @@
+node_modules/*
+.idea
+npm-debug.log
+# A browser distribution is built in `dist` when pushing to npm.
+dist
