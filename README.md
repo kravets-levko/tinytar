@@ -27,8 +27,8 @@ Use `require('tinytar').tar` function. It accepts an array with objects; each
 object describes a single file. Objects properties are directly mapped to
 TAR header fields ([see here](lib/types.js)). Property `data` may contain
 data for a file (if omitted - empty file will be added). Library supports 
-almost everything that can contain data: strings, any array-like objects (
-including built-in `Array` and all typed arrays of course), `ArrayBuffer` and
+almost everything that can contain data: strings, any array-like objects 
+(including built-in `Array` and all typed arrays of course), `ArrayBuffer` and
 Node.js `Buffer` objects. Be careful: characters from string and values 
 from `Array` will be clamped and only low byte will be used; 
 typed arrays and `ArrayBuffer` will be saved properly.
