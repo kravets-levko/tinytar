@@ -38,10 +38,28 @@ somehow else.
   
 For examples, see `examples` folder.  
 
+### Reading archive
+
+Reading is as simple as writing: use `require('tinytar').untar` function and
+pass anything that can be used as buffer (same as `data` property for file 
+object - see above). `untar` also accepts some options:
+
+- `extractData: true` - if set to `false` only archive index will be extracted, 
+  without files data.  
+- `checkHeader: true` - check header for integrity. 
+- `checkChecksum: true` - validate checksums.
+- `checkFileSize: true` - file should be aligned to record boundary (512 bytes)
+ and should contain two empty records at the end.
+ 
+Some or all `check*` options may be set to false - this will allow to read
+corrupted files. 
+
+For examples, see `examples` folder.
+
 ### .tar.gz
 
 This library works great with `pako`: together they can 
-create `.tar.gz` archives:
+create and read `.tar.gz` archives:
 
 ```javascript
 var tar = require('tinytar').tar;
@@ -50,4 +68,13 @@ var gzip = require('pako').gzip;
 var gzipped = gzip(tar([
   /* ... file objects */
 ]));
+```
+ 
+```javascript
+var untar = require('tinytar').untar;
+var ungzip = require('pako').ungzip;
+
+var files = untar(ungzip(
+  /* ... data */
+));
 ```

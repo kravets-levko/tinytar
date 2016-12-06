@@ -1,6 +1,6 @@
 {
   "name": "tinytar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Pure javascript implementation of POSIX TAR file format.",
   "keywords": [
     "tar",
