@@ -6,7 +6,7 @@
     "tar",
     "ustar"
   ],
-  "main": "src/index.js",
+  "main": "index.js",
   "engines": {
     "node": "^4.0.0",
     "npm": "^2.0.0"
